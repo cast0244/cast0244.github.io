@@ -1,0 +1,20 @@
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body header h1, body footer {
+    background-color: peru;
+}
+
+.site-title {
+    color: purple;
+}
+
+#hobbies-list ul {
+    list-style-type: square;
+}
+
+#my-image {
+    box-shadow: 0px 0px 2px 1px black;
+}
