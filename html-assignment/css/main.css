@@ -11,10 +11,24 @@ body header h1, body footer {
     color: purple;
 }
 
+main nav a:link {
+    text-decoration: none;
+    background-color: rgb(238, 204, 55);
+    border-style: solid;
+}
+
+main nav a:link:hover {
+    background-color: springgreen;
+}
+
 #hobbies-list ul {
     list-style-type: square;
 }
 
-#my-image {
+#hobbies-list ul li:nth-child(odd){
+    background-color: slateblue;
+}
+
+#my-image img {
     box-shadow: 0px 0px 2px 1px black;
 }
