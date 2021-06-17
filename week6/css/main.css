@@ -1,6 +1,8 @@
 body {
     color: darkslategray;
     font-family: Arial, Arial, Helvetica, sans-serif;
+    /* Adding backgronud image */
+    background-image: url(../images/white_brick_wall.png);
 }
 
 h1 {
@@ -25,7 +27,10 @@ nav ul a{
 }
 
 #treatofweek {
-    background-color: orange;
+    /* colour image repeat position-x position-y / size */
+    background: orange url(../images/bread.jpg) no-repeat center center;
+    background-size: cover;
+    color: white;
 }
 
 .orange-link{
