@@ -17,7 +17,7 @@ main nav a:link {
     border-style: solid;
 }
 
-main nav a:link:hover {
+main nav a:hover {
     background-color: springgreen;
 }
 
