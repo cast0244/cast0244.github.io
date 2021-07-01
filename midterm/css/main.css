@@ -47,6 +47,28 @@ table {
 	border-spacing: 0;
 }
 
+body {
+	background-color: rgb(98, 180, 167);
+}
+
 header h1 {
 	font-size: large;
+}
+
+main article h2 {
+	font-size: large;
+}
+
+main article img {
+	width: 10%;
+	height: 10%;
+	border: 4px;
+	padding: 10px;
+	margin: 10px;
+
+	float: left;
+}
+
+body main, body footer {
+	background-color: rgb(122, 211, 196);
 }
