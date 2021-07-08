@@ -185,7 +185,8 @@ header h1 {
 
 /* Expands text box for message area */
 #your-msg {
-	height: 100px;
+	height: 6rem;
+	padding-bottom: 5rem;
 }
 
 /* Sets Radio button width */
