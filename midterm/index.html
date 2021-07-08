@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="em">
+<html lang="en">
 
+<!-- Set meta information -->
 <head>
-    <meta charset="uft-8">
+    <meta charset="UTF-8">
     <title>The Lone Starfish</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="container">
+    <!-- Header begins -->
     <header class="header-main">
         <img class="header-img" src="images/lone-starfish-wide.jpg" alt="A centered Starfish">
 
         <h1>Lone Starfish</h1>
 
+        <!-- Navigation Bar begins-->
         <nav>
             <ul class="nav-items">
-                <li><a href="">HOME</a></li>
-                <li><a href="">STORY</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a class="home" href="">HOME</a></li>
+                <li><a class="story" href="">STORY</a></li>
+                <li><a class="contact" href="">CONTACT</a></li>
             </ul>
         </nav>
+        <!-- Navigation Bar ends -->
     </header>
+    <!-- Header ends -->
 
     <main>
+        <!-- Life of a Starfish article -->
         <article class="life-main">
             <h2>Life of a Starfish</h2>
 
@@ -43,6 +49,7 @@
                 danio. Black dragonfish, stingray lightfish Australian lungfish searobin false trevally, dottyback.</p>
         </article>
 
+        <!-- Facts About Starfish article -->
         <article class="facts-main">
             <p>Facts About Starfish</p>
 
@@ -55,9 +62,12 @@
         </article>
 
 
+        <!-- Contact Form begins -->
         <div class="contact-info">
             <p>Contact to learn more</p>
+            <!-- Contact Form links to index.html -->
             <form class="contact-form" action="index.html">
+                <!-- Contact Form text -->
                 <label for="your-name">Your Name:</label>
                 <br>
                 <input type="text" id="your-name" name="your-name">
@@ -72,6 +82,7 @@
                 <br>
                 <br>
 
+                <!-- Contact Form radio buttons -->
                 <p>Would you like to visit the starfish?</p>
                 <label for="yes">Yes</label>
                 <input type="radio" id="yes" name="visit-starfish" value="yes">
@@ -83,11 +94,13 @@
                 <input type="radio" id="maybe" name="visit-starfish" value="maybe">
                 <br>
 
-                <input type="submit" value="Submit">
+                <input type="submit" id="send" value="SEND">
             </form>
         </div>
+        <!-- Contact Form ends -->
     </main>
 
+    <!-- Footer -->
     <footer>
         &copy; Lone Starfish.
     </footer>
