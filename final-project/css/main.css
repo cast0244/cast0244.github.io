@@ -47,13 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-
-
 /******************* 
-    Media Queries 
+    New Content
 *******************/
 
-a, p {
+a, p, tr, label {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 20px;
@@ -64,295 +62,1131 @@ h1, h2, h3, h4 {
     font-weight: 800;
 }
 
-@media screen and (min-width:760px) {
-    .container{
-        max-width: 1200px;
-    }
-}
-
 .masthead {
     background-color: #222;
 }
 
-.logo {
-    padding: 15px;
+/************************ 
+    Desktop Site
+*************************/
+
+@media screen and (min-width:760px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /************************ 
+        Navigation Bar
+    *************************/
+
+    .logo {
+        padding: 25px;
+    }
+    
+    .main-nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .nav-list a {
+        padding: 10px;
+        color: #c78c06;
+        text-decoration: none;
+    }
+    
+    .nav-list form {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-list a:hover, .nav-list a:focus {
+        color: #222;
+        background-color: #c78c06;
+    }
+
+    .search-bar {
+        width: 200px;
+        height: 30px;
+    }
+
+    .im-magnifier {
+        color:#c78c06;
+        background-color: #222;
+        padding: 5px;
+        border: 1px;
+        border-style: solid;
+        border-color: #c78c06;
+        margin-left: -4px;
+    }
+
+    .nav-list button {
+        border: none;
+        background-color: transparent;
+    }
+
+    /************************ 
+        Welcome Section
+    *************************/
+
+    .welcome {
+        padding-left: 60px;
+        max-width: 100%;
+        height: 500px;
+        background-image: url('../images/main-banner.jpg');
+        background-position: 10% 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .welcome-content {
+        max-width: 1000px;
+        margin: auto;
+        float: left;
+        background-color: rgba(34, 34, 34, 0.8);
+        height: 50%;
+        margin-top: 10%;
+        padding-bottom: 5%;
+        color: white;
+    }
+
+    .welcome-text {
+        padding: 55px 10px 35px 15px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 3.5rem;
+    }
+
+    .welcome-content p {
+        padding: 0px 10px 35px 15px;
+        font-size: 0.9rem;
+    }
+
+    .connect-button {
+        margin-left: 15px;
+        padding: 30px;
+        background-color: #c78c06;
+        color: black;
+        text-decoration: none;
+    }
+
+    .welcome .im-care-right {
+        padding-left: 20px;
+        margin-right: -5px;
+        font-size: 1.3rem;
+    }
+
+    /************************ 
+        About Us Section
+    *************************/
+
+    .about-us {
+        background-color: #ffe6ac;
+        padding: 15px;
+    }
+
+    .about-us-img {
+        float: left;
+        padding-left: 5%;
+        padding-right: 10px;
+        width: 44%;
+        height: 100%;
+    }
+
+    .about-us-header {
+        font-size: 2.8rem;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    .about-us-text p {
+        font-size: 0.9rem;
+        padding-bottom: 15px;
+        padding-right: 5%;
+    }
+
+    /************************ 
+        Our Services Section
+    *************************/
+
+    .our-services {
+        display: grid;
+        width: 100%;
+        padding-left: 7%;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 10px 10px;
+        grid-template-areas: 
+        "digital digital digital marketing marketing marketing"
+        "video video web web print print";
+    }
+
+    .our-services-header {
+        font-size: 2.8rem;
+        padding-top: 25px;
+        padding-left: 7%;
+    }
+
+    .our-services .im-care-right {
+        padding-left: 20px;
+        font-size: 1.1rem;
+    }
+
+    /* Digital */
+
+    .digital {
+        grid-area: digital;
+        background-color:#ffe6ac;
+        padding-bottom: 40px;
+    }
+
+    .digital img {
+        width: 100%;
+    }
+
+    .digital-header {
+        font-size: 1.6rem;
+        padding: 20px 0px 20px 10px;
+    }
+
+    .digital p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .digital-button {
+        display: inline-flex;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 10%;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Marketing */
+
+    .marketing {
+        grid-area: marketing;
+        background-color:#ffe6ac;
+        padding-bottom: 40px;
+    }
+
+    .marketing img {
+        width: 100%;
+    }
+    
+    .marketing-header {
+        font-size: 1.6rem;
+        padding: 20px 0px 20px 10px;
+    }
+
+    .marketing p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .marketing-button {
+        display: inline-block;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 10%;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Video */
+
+    .video {
+        grid-area: video;
+        background-color:#ffe6ac;
+        padding-bottom: 20px;
+    }
+
+    .video img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-header {
+        font-size: 1.5rem;
+        padding: 30px 10px 20px 10px;
+    }
+
+    .video p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .video-button {
+        display: inline-block;
+        align-items: center;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 10%;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Web */
+
+    .web {
+        grid-area: web;
+        background-color:#ffe6ac;
+        padding-bottom: 20px;
+    }
+
+    .web img {
+        width: 100%;
+        height: auto;
+    }
+
+    .web-header {
+        font-size: 1.5rem;
+        padding: 30px 0px 20px 10px;
+    }
+
+    .web p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .web-button {
+        display: inline-block;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 10%;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Print */
+
+    .print {
+        grid-area: print;
+        background-color:#ffe6ac;
+        padding-bottom: 20px;
+    }
+
+    .print img {
+        width: 100%;
+        height: auto;
+    }
+
+    .print-header {
+        font-size: 1.5rem;
+        padding: 30px 0px 20px 10px;
+    }
+
+    .print p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .print-button {
+        display: inline-block;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 10%;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /************************ 
+        Our Vision Section
+    *************************/
+
+    .our-vision {
+        width: 100%;
+        height: 250px;
+        background-image: url('../images/vision.jpg');
+        background-size: cover;
+        background-position: 20%;
+        background-repeat: no-repeat;
+        float:inline-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .vision-content {
+        color:white;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
+    .vision-header {
+        padding-left: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .vision-content p {
+        padding-left: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9rem;
+    }
+
+    .vision-button {
+        margin-left: 10px;
+        padding: 35px;
+        border: #c78c06;
+        border-width: 1px;
+        border-style: solid;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    .vision-button .im-care-right {
+        padding-left: 20px;
+        font-size: 1.1rem;
+    }
+
+    /************************ 
+        Our Team Section
+    *************************/
+
+    .our-team {
+        display: grid;
+        width: 85%;
+        padding-left: 7%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "johncontent johncontent"
+        "bobcontent bobcontent";
+    }
+
+    .our-team-header {
+        padding-left: 80px;
+        padding-top: 300px;
+        padding-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    /* John Doe */
+
+    .john-doe {
+        grid-area: johncontent;
+        background-color:#ffe6ac;
+    }
+
+    .john-image {
+        float: left;
+        width: 50%;
+    }
+
+    .john-header {
+        font-size: 1.8rem;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .john-title {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 3px;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: #c78c06;
+    }
+
+    .john-content p {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Bob Rite */
+
+    .bob-rite {
+        grid-area: bobcontent;
+        background-color:#ffe6ac;
+    }
+
+    .bob-image {
+        float: right;
+        width: 50%;
+    }
+
+    .bob-header {
+        font-size: 1.8rem;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .bob-title {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 3px;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: #c78c06;
+    }
+
+    .bob-content p {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /************************ 
+        Contact Us Section
+    *************************/
+
+    .contact-us {
+        padding: 75px;
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "sendamessage location"
+        "hours hours";
+    }
+
+    .contact-us-header {
+        padding-left: 75px;
+        font-size: 2rem;
+        padding-top: 5px;
+    }
+
+    /* Send a Message */
+
+    .send-a-message {
+        font-size: 1.6rem;
+    }
+
+    .contact-message {
+        grid-area: sendamessage;
+        width: 95%;
+    }
+
+    .contact-message input {
+        width: 100%;
+    }
+
+    .contact-message input:nth-of-type(3) {
+        height: 140px;
+    }
+
+    .contact-message button {
+        color: #c78c06;
+        background-color: #333;
+        border: none;
+        font-size: 1.2rem;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Location */
+
+    .location {
+        grid-area: location;
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+
+    /* Hours */
+
+    .hours-of-operation {
+        grid-area: hours;
+    }
+
+    .hours-text {
+        font-size: 1.6rem;
+        padding-bottom: 15px;
+    }
+
+    .hours-table {
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .hours-table tr th {
+        font-size: 0.9rem;
+        border: black;
+        border-width: 1px;
+        border-style: solid;
+        background-color: #ffe6ac;
+        padding: 10px;
+    }
+
+    .hours-table tr td {
+        font-size: 0.9rem;
+        border: black;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px;
+    }
+
+    /************************ 
+        Footer Section
+    *************************/
+
+    .footer {
+        width: 94%;
+        padding-top: 35px;
+        padding-left: 75px;
+        padding-bottom: 25px;
+        background-color: #222;
+        color: #c78c06;
+    }
+
+    .footer a {
+        color: #c78c06;
+    }
 }
 
-.nav-list a {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #c78c06;
-    text-decoration: none;
-}
+/******************* 
+    Mobile Site
+*******************/
 
-.nav-list form {
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+@media screen and (max-width:760px){
 
-.nav-list a:hover, .nav-list a:focus {
-    color: #222;
-    background-color: #c78c06;
-    margin-left: 15px;
-    margin-right: 15px;
-}
+    /************************ 
+        Navigation Section
+    *************************/
 
-.welcome {
-    width: 100%;
-    height: 550px;
-    background-image: url('../images/main-banner.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    float:inline-start;
-}
+    .logo {
+        padding: 15px;
+    }
 
-.welcome-content {
-    background-color: rgba(34, 34, 34, 0.8);
-    height: 350px;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    color: white;
-}
+    .nav-list a {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #c78c06;
+        text-decoration: none;
+    }
 
-.im-magnifier {
-    color:#c78c06;
-    background-color: #222;
-    padding: 5px;
-    border: 1px;
-    border-style: solid;
-    border-color: #c78c06;
-}
+    .nav-list form {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-.nav-list button {
-    border: none;
-    background-color: transparent;
-}
+    .nav-list a:hover, .nav-list a:focus {
+        color: #222;
+        background-color: #c78c06;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
-.welcome-text {
-    padding: 55px 10px 35px 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 3.5rem;
-}
+    .search-bar {
+        width: 780px;
+        height: 30px;
+    }
 
-.welcome-content p {
-    padding: 0px 10px 35px 15px;
-    font-size: 0.9rem;
-}
+    .im-magnifier {
+        color:#c78c06;
+        background-color: #222;
+        padding: 5px;
+        border: 1px;
+        border-style: solid;
+        border-color: #c78c06;
+        margin-left: -4px;
+    }
 
-.connect-button {
-    margin-left: 15px;
-    padding: 30px;
-    background-color: #c78c06;
-    color: black;
-    text-decoration: none;
-}
+    .nav-list button {
+        border: none;
+        background-color: transparent;
+    }
 
-/*  About Us */
+    /************************ 
+        Welcome Section
+    *************************/
 
-.about-us {
-    background-color: #ffe6ac;
-    padding: 15px;
-}
+    .welcome {
+        width: 100%;
+        height: 550px;
+        background-image: url('../images/main-banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-.about-us-img {
-    width: 100%;
-    height: auto;
-    padding-top: 15px;
-}
+    .welcome-content {
+        float: left;
+        background-color: rgba(34, 34, 34, 0.8);
+        height: 72%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        color: white;
+    }
 
-.about-us-header {
-    font-size: 3.5rem;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
+    .welcome-text {
+        padding: 55px 10px 35px 15px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 3.5rem;
+    }
 
-.about-us-text p {
-    font-size: 0.9rem;
-    padding-bottom: 15px;
-}
+    .welcome-content p {
+        padding: 0px 10px 35px 15px;
+        font-size: 0.9rem;
+    }
 
-/* Our Services */
+    .connect-button {
+        margin-left: 15px;
+        padding: 30px;
+        background-color: #c78c06;
+        color: black;
+        text-decoration: none;
+    }
 
-.our-services {
-    padding: 15px;
-}
+    .welcome .im-care-right {
+        padding-left: 20px;
+        margin-right: -5px;
+        font-size: 1.3rem;
+    }
 
-.our-services-text {
-    font-size: 3.5rem;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
+    /************************ 
+        About Us Section
+    *************************/
 
-.digital {
-    background-color:#ffe6ac;
-    height: 635px;
-    margin-bottom: 10px;
-}
+    .about-us {
+        background-color: #ffe6ac;
+        padding: 15px;
+    }
 
-.digital img {
-    width: 100%;
-    height: auto;
-}
+    .about-us-img {
+        width: 100%;
+        height: auto;
+    }
 
-.digital-text {
-    font-size: 1.6rem;
-    padding: 30px 0px 20px 10px;
-}
+    .about-us-header {
+        font-size: 3.5rem;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 
-.digital p {
-    font-size: 0.9rem;
-    padding: 0px 0px 35px 10px;
-}
+    .about-us-text p {
+        font-size: 0.9rem;
+        padding-bottom: 15px;
+    }
 
-.digital-button {
-    margin: 10px;
-    margin-top: 15px;
-    padding: 25px;
-    background-color:rgba(34, 34, 34);
-    color: white;
-    text-decoration: none;
-}
+    /************************ 
+        Our Services
+    *************************/
 
-/* Marketing */
+    .our-services {
+        padding: 15px;
+    }
 
-.marketing {
-    background-color:#ffe6ac;
-    height: 635px;
-    margin-bottom: 10px;
-}
+    .our-services-header {
+        font-size: 3.5rem;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 
-.marketing img {
-    width: 100%;
-    height: auto;
-}
+    .our-services .im-care-right {
+        padding-left: 20px;
+        font-size: 1.1rem;
+    }
 
-.marketing-text {
-    font-size: 1.6rem;
-    padding: 30px 0px 20px 10px;
-}
+    /* Digital */
 
-.marketing p {
-    font-size: 0.9rem;
-    padding: 0px 0px 35px 10px;
-}
+    .digital {
+        background-color:#ffe6ac;
+        height: 610px;
+        margin-bottom: 10px;
+    }
 
-.marketing-button {
-    margin: 10px;
-    margin-top: 15px;
-    padding: 25px;
-    background-color:rgba(34, 34, 34);
-    color: white;
-    text-decoration: none;
-}
+    .digital img {
+        width: 100%;
+        height: auto;
+    }
 
-/* Video */
+    .digital-header {
+        font-size: 1.6rem;
+        padding: 30px 0px 20px 10px;
+    }
 
-.video {
-    background-color:#ffe6ac;
-    height: 635px;
-    margin-bottom: 10px;
-}
+    .digital p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
 
-.video img {
-    width: 100%;
-    height: auto;
-}
+    .digital-button {
+        margin: 10px;
+        margin-top: 15px;
+        padding: 25px;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
 
-.video-text {
-    font-size: 1.6rem;
-    padding: 30px 0px 20px 10px;
-}
+    /* Marketing */
 
-.video p {
-    font-size: 0.9rem;
-    padding: 0px 0px 35px 10px;
-}
+    .marketing {
+        background-color:#ffe6ac;
+        height: 610px;
+        margin-bottom: 10px;
+    }
 
-.video-button {
-    margin: 10px;
-    margin-top: 15px;
-    padding: 25px;
-    background-color:rgba(34, 34, 34);
-    color: white;
-    text-decoration: none;
-}
+    .marketing img {
+        width: 100%;
+        height: auto;
+    }
 
-/* Web */
+    .marketing-header {
+        font-size: 1.6rem;
+        padding: 30px 0px 20px 10px;
+    }
 
-.web {
-    background-color:#ffe6ac;
-    height: 635px;
-    margin-bottom: 10px;
-}
+    .marketing p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
 
-.web img {
-    width: 100%;
-    height: auto;
-}
+    .marketing-button {
+        margin: 10px;
+        margin-top: 15px;
+        padding: 25px;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
 
-.web-text {
-    font-size: 1.6rem;
-    padding: 30px 0px 20px 10px;
-}
+    /* Video */
 
-.web p {
-    font-size: 0.9rem;
-    padding: 0px 0px 35px 10px;
-}
+    .video {
+        background-color:#ffe6ac;
+        height: 610px;
+        margin-bottom: 10px;
+    }
 
-.web-button {
-    margin: 10px;
-    margin-top: 15px;
-    padding: 25px;
-    background-color:rgba(34, 34, 34);
-    color: white;
-    text-decoration: none;
-}
+    .video img {
+        width: 100%;
+        height: auto;
+    }
 
-/* Print */
+    .video-header {
+        font-size: 1.6rem;
+        padding: 30px 0px 20px 10px;
+    }
 
-.print {
-    background-color:#ffe6ac;
-    height: 635px;
-    margin-bottom: 10px;
-}
+    .video p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
 
-.print img {
-    width: 100%;
-    height: auto;
-}
+    .video-button {
+        margin: 10px;
+        margin-top: 15px;
+        padding: 25px;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
 
-.print-text {
-    font-size: 1.6rem;
-    padding: 30px 0px 20px 10px;
-}
+    /* Web */
 
-.print p {
-    font-size: 0.9rem;
-    padding: 0px 0px 35px 10px;
-}
+    .web {
+        background-color:#ffe6ac;
+        height: 610px;
+        margin-bottom: 10px;
+    }
 
-.print-button {
-    margin: 10px;
-    margin-top: 15px;
-    padding: 25px;
-    background-color:rgba(34, 34, 34);
-    color: white;
-    text-decoration: none;
-}
+    .web img {
+        width: 100%;
+        height: auto;
+    }
 
-/* Vision */
+    .web-header {
+        font-size: 1.6rem;
+        padding: 30px 0px 20px 10px;
+    }
 
-.our-vision {
-    width: 100%;
-    height: 300px;
-    background-image: url('../images/vision.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    float:inline-start;
+    .web p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .web-button {
+        margin: 10px;
+        margin-top: 15px;
+        padding: 25px;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Print */
+
+    .print {
+        background-color:#ffe6ac;
+        height: 610px;
+        margin-bottom: 15px;
+    }
+
+    .print img {
+        width: 100%;
+        height: auto;
+    }
+
+    .print-header {
+        font-size: 1.6rem;
+        padding: 30px 0px 20px 10px;
+    }
+
+    .print p {
+        font-size: 0.9rem;
+        padding: 0px 0px 35px 10px;
+    }
+
+    .print-button {
+        margin: 10px;
+        margin-top: 15px;
+        padding: 25px;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    /************************ 
+        Our Vision Section
+    *************************/
+
+    .our-vision {
+        width: 100%;
+        height: 270px;
+        background-image: url('../images/vision.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        float:inline-start;
+        margin-bottom: 20px;
+    }
+
+    .vision-content {
+        color: white;
+    }
+
+    .vision-header {
+        padding-left: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .vision-content p {
+        padding-left: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9rem;
+    }
+
+    .vision-button {
+        margin-left: 10px;
+        padding: 35px;
+        border: #c78c06;
+        border-width: 1px;
+        border-style: solid;
+        background-color:rgba(34, 34, 34);
+        color: white;
+        text-decoration: none;
+    }
+
+    .vision-button .im-care-right {
+        padding-left: 20px;
+        font-size: 1.1rem;
+    }
+
+    /************************ 
+        Our Team Section
+    *************************/
+
+    .our-team {
+        padding: 15px;
+    }
+
+    .our-team-header {
+        padding-left: 10px;
+        padding-top: 300px;
+        padding-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    /* John Doe */
+
+    .john-image {
+        width: 100%;
+        margin-bottom: -3px;
+    }
+
+    .john-content {
+        background-color:#ffe6ac;
+        margin-bottom: 20px;
+    }
+
+    .john-header {
+        font-size: 1.8rem;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .john-title {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 3px;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: #c78c06;
+    }
+
+    .john-content p {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Bob Rite */
+
+    .bob-image {
+        width: 100%;
+        margin-bottom: -3px;
+    }
+
+    .bob-content {
+        background-color:#ffe6ac;
+        margin-bottom: 20px;
+    }
+
+    .bob-header {
+        font-size: 1.8rem;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .bob-title {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 3px;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: #c78c06;
+    }
+
+    .bob-content p {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /************************ 
+        Contact Us Section
+    *************************/
+
+    .contact-us {
+        padding: 15px;
+    }
+
+    .contact-us-header {
+        font-size: 2rem;
+        padding-top: 5px;
+        padding-bottom: 25px;
+    }
+
+    .send-a-message {
+        font-size: 1.6rem;
+        padding-bottom: 15px;
+    }
+
+    .contact-message input {
+        width: 100%;
+    }
+
+    .contact-message input:nth-of-type(3) {
+        height: 140px;
+    }
+
+    .contact-message button {
+        color: #c78c06;
+        background-color: #333;
+        border: none;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    /************************ 
+        Hours of Operation Section
+    *************************/
+
+    .hours-text {
+        font-size: 1.6rem;
+        padding-bottom: 15px;
+    }
+
+    .hours-table {
+        width: 100%;
+    }
+
+    .hours-table tr th {
+        font-size: 0.9rem;
+        border: black;
+        border-width: 1px;
+        border-style: solid;
+        background-color: #ffe6ac;
+        padding: 10px;
+    }
+
+    .hours-table tr td {
+        font-size: 0.9rem;
+        border: black;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px;
+    }
+
+    /************************ 
+        Location Section
+    *************************/
+
+    .location-header {
+        font-size: 1.6rem;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    .location iframe{
+        width: 100%;
+    }
+
+    /************************ 
+        Footer Section
+    *************************/
+
+    .footer {
+        padding-top: 35px;
+        padding-left: 15px;
+        padding-bottom: 25px;
+        background-color: #222;
+        color: #c78c06;
+    }
+
+    .footer a {
+        color: #c78c06;
+    }
+
+    /************************ 
+        End of Mobile
+    *************************/
 }
